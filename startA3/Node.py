@@ -15,7 +15,14 @@ class Node:
                     print("\nTOLAYER2: " + "source: {} ".format(self.myID) + "dest: {} ".format(i) + "costs: ", end="")
                     for j in range(num):
                         print("{} ".format(costs[j]), end="")
+                        if(i != j):
+                            self.distanceTable[i][j] = 999
                     print("\n")
+                self.distanceTable[ID][i] = costs[i]
+            else:
+                for j in range(num):
+                    if(j != ID):
+                        self.distanceTable[j][i] = 999
 
     def recvUpdate(self, pkt):
 
