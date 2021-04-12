@@ -13,10 +13,12 @@ class Node:
             if(i != ID):
                 if(costs[i] != 999):
                     print("\nTOLAYER2: " + "source: {} ".format(self.myID) + "dest: {} ".format(i) + "costs: ", end="")
-                    for j in range(num):
+                for j in range(num):
+                    if(costs[i] != 999):
                         print("{} ".format(costs[j]), end="")
-                        if(i != j):
-                            self.distanceTable[i][j] = 999
+                    if(i != j):
+                        self.distanceTable[i][j] = 999
+                if(costs[i] != 999):
                     print("\n")
                 self.distanceTable[ID][i] = costs[i]
             else:
