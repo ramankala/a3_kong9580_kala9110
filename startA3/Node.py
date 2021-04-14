@@ -1,3 +1,6 @@
+#CP372 Assignment 3
+#Raman Kala: 120869110
+#Ricky Kong: 180659580
 from common import *
 
 class Node:
